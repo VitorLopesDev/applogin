@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - AppLogin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #e0f7fa, #e3f2fd);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .login-container {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #1565c0;
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #333;
+            font-weight: 600;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 0.7rem;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        button {
+            width: 100%;
+            padding: 0.8rem;
+            background-color: #1976d2;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #1565c0;
+        }
+
+        .mensagem {
+            text-align: center;
+            color: green;
+            margin-top: 1rem;
+            font-weight: 600;
+        }
+
+        .link-cadastro {
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        .link-cadastro a {
+            color: #1565c0;
+            font-weight: 600;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .link-cadastro a:hover {
+            text-decoration: underline;
+            color: #0d47a1;
+        }
+    </style>
+</head>
+<body>
+
+<div class="login-container">
+    <h2>Entrar no sistema</h2>
+
+    <form action="/login" method="post">
+        <label for="email">E-mail</label>
+        <input type="text" id="email" name="email" />
+
+        <label for="senha">Senha</label>
+        <input type="password" id="senha" name="senha" />
+
+        <button type="submit">Entrar</button>
+    </form>
+
+    <div class="link-cadastro">
+        <a href="/cadastro">Não tem uma conta? Registrar-se</a>
+    </div>
+
+    <div th:if="${erro}" class="mensagem" style="color: red;">
+        <p th:text="${erro}"></p>
+    </div>
+
+</div>
+
+</body>
+</html>

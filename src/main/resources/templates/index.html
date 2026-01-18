@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>AppLogin - Sistema de Autenticação</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f3f4f6;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #1565c0;
+            color: white;
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+        }
+
+        nav a {
+            color: white;
+            margin-left: 1.5rem;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            flex: 1;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 2.4rem;
+            margin-bottom: 1rem;
+            color: #0d47a1;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background-color: #1976d2;
+            color: white;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #0d47a1;
+        }
+
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 2rem;
+            gap: 2rem;
+        }
+
+        .feature {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            padding: 2rem;
+            max-width: 300px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #e0e0e0;
+            text-align: center;
+            padding: 1rem;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>AppLogin</h1>
+    <nav>
+        <a href="/cadastro">Cadastro</a>
+        <a href="/login">Login</a>
+        <a href="https://github.com/vitorlopesdev" target="_blank">GitHub</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h2>Controle de Acesso com Spring Boot</h2>
+    <p>Um sistema completo de autenticação com cadastro, login e proteção de rotas.</p>
+    <a href="/cadastro" class="btn">Comece agora</a>
+</section>
+
+<section class="features">
+    <div class="feature">
+        <h3>✔ Validação de Dados</h3>
+        <p>Valide inputs do usuário com Jakarta Bean Validation.</p>
+    </div>
+    <div class="feature">
+        <h3>✔ Integração com MySQL</h3>
+        <p>Armazene informações com Spring Data JPA + Docker com MySQL.</p>
+    </div>
+    <div class="feature">
+        <h3>✔ Interface Responsiva</h3>
+        <p>Feita com HTML5, CSS3 e fontes modernas do Google Fonts.</p>
+    </div>
+</section>
+
+<footer>
+    Desenvolvido por Vitor Lopes — <a href="https://github.com/vitorlopesdev" target="_blank">GitHub</a>
+</footer>
+
+</body>
+</html>
